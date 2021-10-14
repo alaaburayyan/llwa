@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let Luai WhatsApp</title>
+</head>
+<body>
+    <p>Hi There</p>
+
+    <input type="tel" id = "tbInput" />
+    <button onclick="fProcess();" >Go</button>
+
+
+
+
+
+    <script type="text/javascript">
+        function fProcess()
+        {
+            var sInput = document.getElementById("tbInput").value;
+            
+            // Cleansing input:
+            sInput = sInput.replace(/[^\d]+/g, ""); // Keep digits only
+            sInput = Number(sInput).toString(); // remove leading zeros
+
+
+            // Go to WhatsApp:
+            // window.location = "https://wa.me/" + sInput;
+            document.getElementById("tbInput").value = sInput;
+
+        }
+    
+</script>
+</body>
+</html>
